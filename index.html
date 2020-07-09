@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang = "Vi">
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+	<meta name = "author" content="HuynhNhu">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
+	<style>
+		*
+		{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: Arial, "Times new roman";
+			font-size: 14px;
+			font-weight: normal;
+			color: black;
+		}
+
+		.body-wrapper
+		{
+			background-image: url('https://i.imgur.com/t0BViS9.jpg');
+			background-size: cover;
+			width: 100vw;
+			height: 100vh;
+			position: 	relative;	
+		}
+
+		.black-cover
+		{
+			background-color: black;
+			opacity: 0.7;
+			width: 100%;
+			height: 100%;
+		}
+
+		.content
+		{
+			position: 	absolute;	
+			left: 	0;
+			right: 	0;
+			top: 	0;
+			bottom: 	0;
+		}
+
+		form
+		{
+			display: 	grid;
+			justify-content: 	center;		
+			margin-top: 2%;
+		}
+
+		form input[type=text], input[type=password]
+		{
+			background-color: 	rgba(255,255,255,0.4);
+			outline: 	none;
+			font-weight: bold;
+			border-radius: 40px;
+			margin: 4px;
+			padding: 20px;
+			padding-left: 50px;
+			width: 400px;
+			height: 50px;
+			outline: 	none;	
+			border: 	none;
+
+		}
+
+		form input::placeholder
+		{
+			color: #D8D8D8;
+			padding-left: 5px;
+		}
+
+		form input[type=text]:focus, input[type=password]:focus, input[type=text]:hover, input[type=password]:hover
+		{
+			box-shadow: 	0 0 6px #FF0040;
+		}
+
+		div.user-box
+		{
+			animation: righttoleft 1.3s 0.2s ease-in;
+		}
+
+		div.password-box
+		{
+			animation: lefttoright 1.3s 0.2s ease-in;
+		}
+
+		div.submit-box
+		{
+			animation: righttoleft 1.3s 0.2s ease-in;
+		}
+
+		form input[type=submit]
+		{
+			color: white;
+			text-transform: uppercase;	
+			font-size: 	12px;
+			letter-spacing: 2px;
+			background-color: #FA5882;
+			opacity: 	0.9;
+			margin-top: 	10px;
+			outline: 	none;
+			border: none;
+			font-weight: bold;
+			border-radius: 40px;
+			padding: 20px;
+			width: 400px;
+			height: 50px;
+			
+		}
+
+		form input[type=submit]:hover
+		{
+			box-shadow: -4px -2px 5px #FF0040;
+			cursor: pointer;
+		}
+
+		form input[type=submit]:active
+		{
+			box-shadow: 4px 2px 5px #FF0040;
+			cursor: pointer;
+		}
+
+		div.user-box, div.password-box
+		{
+			position: relative;
+			margin-bottom: 10px;
+		}
+
+		div.user-box i
+		{
+			color: white;
+			position: absolute;
+			left: 2%;
+			top: 39%;
+			font-size: 14px;
+			padding-left: 15px;
+		}
+
+		div.password-box i
+		{
+			color: white;
+			position: absolute;
+			left: 2.3%;
+			top: 34%;
+			font-size: 16px;
+			padding-left: 15px;
+		}
+
+		div.title-team h1
+		{
+			color: white;
+			font-family: 'Kalam', cursive;
+			font-size: 42px;
+			font-weight: bolder;
+			display: grid;
+			justify-content: center;
+			margin-top: 10%;
+			animation: lefttoright 1.3s 0.2s ease-in;
+			cursor: context-menu;
+		}
+
+		div.title-team h1:hover
+		{
+			transform: translateY(2px);
+		}
+
+		div.header span#welcome
+		{
+			color: white;
+			font-family: cursive;
+			font-size: 20px;
+			font-weight: bolder;
+			display: inline-block;
+			margin-left: 50px;
+			margin-top: 10px;
+		}
+
+		div.header span#project-name
+		{
+			color: white;
+			font-family: cursive;
+			font-size: 20px;
+			font-weight: bolder;
+			display: inline-block;
+			margin-left: 1100px;
+			margin-top: 10px;
+		}
+
+		@keyframes lefttoright
+		{
+			from{
+				transform: translateX(-100%);
+				opacity: 	0;
+			}
+			to
+			{
+				transform: translateX(0);
+				opacity: 	1;
+			}
+		}
+
+		@keyframes righttoleft
+		{
+			from{
+				transform: translateX(100%);
+				opacity: 	0;
+			}
+			to
+			{
+				transform: translateX(0);
+				opacity: 	1;
+			}
+		}
+
+	</style>
+</head>
+<body>
+<div class="body-wrapper">
+	<div class="black-cover">
+	</div>
+	<div class="content">
+		<div class="header">
+			<span id="welcome">Welcome 	! </span>
+			<span id="project-name">Project: Coding Socket</span>
+		</div>
+		<div class="title-team">
+			<h1>LBN-TEAM</h1>
+		</div>
+		<form action = "hello.py" method="post">
+			<div class="user-box">
+				<input type="text" id="username" name = "user" placeholder="Username">
+				<i class="fa fa-user fa-lg"></i>
+			</div>
+			<div class="password-box">
+				<input type="password" id="password" name = "password" placeholder="Password">
+				<i class="fa fa-lock"></i>
+			</div>
+			<div class="submit-box">
+				<input type="submit" id="submit" value = "get started">
+			</div>
+		</form>	
+	</div>
+</div>
+</body>
+</html>

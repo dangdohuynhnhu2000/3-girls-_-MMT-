@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+    </head>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+       .box
+       {
+           float:left;
+           width:40%;
+           height:300px;
+          
+           margin:auto;
+           justify-content:center;
+           align-items:center;
+           
+           display:flex;
+           margin-left: 50px;
+           margin-block-start: 20px;
+          
+           position: relative;
+           left:100px;
+           flex-direction: column;
+           overflow: auto;
+         
+       }
+       .box_right{
+        float:left;
+           width:30%;
+           height:300px;
+           justify-content:center;
+           align-items:left;
+           
+           display:flex;
+           margin-left: 50px;
+           margin-block-start: 20px;
+          
+          
+           flex-direction: column;
+           overflow: auto;
+       }
+       
+       .clearfix::after{
+           content: "";
+           display: table;
+           clear: both;
+           margin: 30px;
+       }
+       a{
+           float:left;
+       }
+       a::after{
+           content: "";
+           display: table;
+           clear: both;
+       }
+
+    </style>
+    <body>
+        <h1>Members</h1>
+        <div class="clearfix">
+            <div class="box">
+                <img src="https://iili.io/dJbooG.jpg" height="300" width ="300" />
+            </div>
+           <div class ="box_right">
+             
+            <p><b>Họ tên: Dương Bội Long</b> <br> </p>
+          <p>MSSV: 18120200</p>
+          <p>Sinh viên năm 2 trường ĐH khoa Học Tự Nhiên</p>
+               
+               
+           </div>
+        </div>
+       
+        <div class="clearfix" >
+            <div class="box">
+                <img src="https://iili.io/dJbxVf.jpg" alt = "Huỳnh Như" height="300" width ="300">
+               
+            </div>
+           <div class ="box_right">
+            <p><b>Họ tên: Đặng Đỗ Huỳnh Như</b> <br> </p>
+            <p>MSSV: 18120219</p>
+            <p>Sinh viên năm 2 trường ĐH khoa Học Tự Nhiên</p>
+                 
+           </div>
+        </div>
+        <div class="clearfix" >
+            <div class="box">
+                <img src="https://iili.io/dJbul2.jpg" alt = "Dương Binl" height="300" width ="300">
+               
+            </div>
+           <div class ="box_right">
+            <p><b>Họ tên: Nguyễn Dương Binl</b> <br> </p>
+            <p>MSSV: 18120292</p>
+            <p>Sinh viên năm 2 trường ĐH khoa Học Tự Nhiên</p>
+                 
+           </div>
+        </div>
+
+    </body>
+   
+    <div class="member"></div>
+</html>
